@@ -6,20 +6,20 @@ input = gets.chomp
 subtotal = input.to_f
 
 # Taxes
-pst_rate = 0.07
-gst_rate = 0.05
+PST_RATE = 0.07
+GST_RATE = 0.05
 
 # Dollar Amount with Taxes
-GST = subtotal * gst_rate
-PST = subtotal * pst_rate
+gst = subtotal * GST_RATE
+pst = subtotal * PST_RATE
 
 # Grand Total
-grand_total = subtotal + GST + PST
+grand_total = subtotal + gst + pst
 
 # Output
 puts "Subtotal: $#{subtotal}"
-puts "PST: $#{PST} - #{pst_rate * 100}%"
-puts "GST: $#{GST} - #{gst_rate * 100}%"
+puts "PST: $#{pst} - #{PST_RATE * 100}%"
+puts "GST: $#{gst} - #{GST_RATE * 100}%"
 puts "Grand Total: $#{grand_total}"
 
 # Messages based on Output
